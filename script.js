@@ -14,11 +14,35 @@ let computerChoice = undefined;
 function getComputerChoice() {
     randomNumber = Math.ceil(Math.random() * 3)
     if (randomNumber === 1) {
-        return computerChoice = "rock";
+        return "rock";
     } else if (randomNumber === 2) {
-        return computerChoice = "paper";
+        return "paper";
     } else {
-        return computerChoice = "scissors";
+        return "scissors";
     }
 }
+computerChoice = getComputerChoice();
+
+// This function determines who wins the round.
+
+function playRound(playerChoice, computerChoice) {
+    switch (true) {
+        case (playerChoice === "rock") && (computerChoice === "scissors"):
+            return "You win :) Rock beats Scissors!";
+        case (playerChoice === "paper") && (computerChoice === "rock"):
+            return "You win :) Paper beats Rock!";
+        case (playerChoice === "scissors") && (computerChoice === "paper"):
+            return "You win :) Scissors beats Paper!";
+        case (computerChoice === "rock") && (playerChoice === "scissors"):
+            return "You lose :( Rock beats Scissors!";
+        case (computerChoice === "paper") && (playerChoice === "rock"):
+            return "You lose :( Paper beats Rock!";
+        case (computerChoice === "scissors") && (playerChoice === "paper"):
+            return "You lose :( Scissors beats Paper!";
+        default:
+            return "It is a draw :/"
+    }
+}
+
+
 
