@@ -1,16 +1,25 @@
-console.log("Rock-Paper-Scissors")
+//Title.
 
-// This loop validates the player's decision.
+console.log("Rock-Paper-Scissors");
 
-let playerChoice = prompt("Rock, Paper or Scissors?").toLowerCase();
-while ((playerChoice !== "rock") && (playerChoice !== "paper") && (playerChoice !== "scissors")) {
-    alert("Please check your spelling and try again.")
-    playerChoice = prompt("Rock, Paper or Scissors?").toLowerCase();
+// This function receives and validates the player's choice.
+
+function getPlayerChoice() {
+    let playerChoice = prompt("Rock, Paper or Scissors?");
+    while ((playerChoice !== "rock") && (playerChoice !== "paper") && (playerChoice !== "scissors") && (playerChoice !== null)) {
+        alert("Please check your spelling and try again.");
+        playerChoice = prompt("Rock, Paper or Scissors?");
+    }
+    if (playerChoice === null) {
+        alert("Sorry to see you go.");
+    } else {
+        playerChoice = playerChoice.toLowerCase();
+    }
+    return playerChoice;
 }
 
 // This function allows the computer to randomly choose rock, paper or scissors.
 
-let computerChoice = undefined;
 function getComputerChoice() {
     randomNumber = Math.ceil(Math.random() * 3)
     if (randomNumber === 1) {
@@ -21,11 +30,12 @@ function getComputerChoice() {
         return "scissors";
     }
 }
-computerChoice = getComputerChoice();
 
 // This function determines who wins the round.
 
-function playRound(playerChoice, computerChoice) {
+function playRound() {
+    let playerChoice = getPlayerChoice();
+    let computerChoice = getComputerChoice();
     switch (true) {
         case (playerChoice === "rock") && (computerChoice === "scissors"):
             return "You win :) Rock beats Scissors!";
@@ -39,10 +49,46 @@ function playRound(playerChoice, computerChoice) {
             return "You lose :( Paper beats Rock!";
         case (computerChoice === "scissors") && (playerChoice === "paper"):
             return "You lose :( Scissors beats Paper!";
+        case (playerChoice === null):
+            return "The game is cancelled";
         default:
-            return "It is a draw :/"
+            return "It is a draw :/";
+    }
+}
+
+// This function plays five rounds of the game and displays the overall winner.
+
+function game() {
+    let playerScore = 0;
+    let computerScore = 0;
+    let end = false;
+    for (let i = 0; i < 5; ++i) {
+        let roundWinner = playRound();
+        if (roundWinner === "The game is cancelled") {
+            end = true;
+            break;
+        } else {
+            console.log("Round", i+1, ":", roundWinner);
+            if (roundWinner.slice(0, 7) === "You win") {
+                ++playerScore;
+            } else if (roundWinner.slice(0, 8) === "You lose"){
+                ++computerScore;
+            }
+        }
+    }
+    
+    if (end) {
+        console.log("The game is cancelled.")
+    } else if (playerScore > computerScore) {
+        console.log("Player score:", playerScore + "\n" + "Computer score:", computerScore + "\n" + "You Win!");
+    } else if (playerScore < computerScore) {
+        console.log("Player score:", playerScore + "\n" + "Computer score:", computerScore + "\n" + "Sorry, you lose.");
+    } else {
+        console.log("Player score:", playerScore + "\n" + "Computer score:", computerScore + "\n" + "Well look at that, it's a draw.");
     }
 }
 
 
+// Main program.
 
+game();
