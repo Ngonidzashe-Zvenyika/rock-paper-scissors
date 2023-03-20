@@ -1,6 +1,6 @@
 //Title.
 
-console.log("Rock-Paper-Scissors");
+console.log("Rock-Paper-Scissors - Best of 5!");
 
 // This function receives and validates the player's choice.
 
@@ -38,21 +38,22 @@ function playRound() {
     let computerChoice = getComputerChoice();
     switch (true) {
         case (playerChoice === "rock") && (computerChoice === "scissors"):
-            return "You win :) Rock beats Scissors!";
+            return "You win :) rock beats scissors!";
         case (playerChoice === "paper") && (computerChoice === "rock"):
-            return "You win :) Paper beats Rock!";
+            return "You win :) paper beats rock!";
         case (playerChoice === "scissors") && (computerChoice === "paper"):
-            return "You win :) Scissors beats Paper!";
+            return "You win :) scissors beats paper!";
         case (computerChoice === "rock") && (playerChoice === "scissors"):
-            return "You lose :( Rock beats Scissors!";
+            return "You lose :( rock beats scissors!";
         case (computerChoice === "paper") && (playerChoice === "rock"):
-            return "You lose :( Paper beats Rock!";
+            return "You lose :( paper beats rock!";
         case (computerChoice === "scissors") && (playerChoice === "paper"):
-            return "You lose :( Scissors beats Paper!";
+            return "You lose :( scissors beats paper!";
         case (playerChoice === null):
             return "The game is cancelled";
         default:
-            return "It is a draw :/";
+            let string = "It is a draw :/ " + playerChoice + " = " +  computerChoice + ".";
+            return string;
     }
 }
 
@@ -80,11 +81,11 @@ function game() {
     if (end) {
         console.log("The game is cancelled.")
     } else if (playerScore > computerScore) {
-        console.log("Player score:", playerScore + "\n" + "Computer score:", computerScore + "\n" + "You Win!");
+        console.log("Player score:", playerScore + "\n" + "Computer score:", computerScore + "\n" + "You won the game!");
     } else if (playerScore < computerScore) {
-        console.log("Player score:", playerScore + "\n" + "Computer score:", computerScore + "\n" + "Sorry, you lose.");
+        console.log("Player score:", playerScore + "\n" + "Computer score:", computerScore + "\n" + "Sorry, you lost the game.");
     } else {
-        console.log("Player score:", playerScore + "\n" + "Computer score:", computerScore + "\n" + "Well look at that, it's a draw.");
+        console.log("Player score:", playerScore + "\n" + "Computer score:", computerScore + "\n" + "Well look at that, it's a tie.");
     }
 }
 
