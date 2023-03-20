@@ -59,7 +59,7 @@ function playRound() {
 
 // This function plays five rounds of the game and displays the overall winner.
 
-function game() {
+function playGame() {
     let playerScore = 0;
     let computerScore = 0;
     let end = false;
@@ -92,4 +92,4 @@ function game() {
 
 // Main program.
 
-game();
+playGame();
