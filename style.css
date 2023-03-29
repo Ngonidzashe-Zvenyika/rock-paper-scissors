@@ -32,18 +32,24 @@ body {
 .computerScore {
     margin-top: 2vh;
     font-size: 2vh;
-    font-family: "Silkscreen", "cursive";
+    font-family: "Luckiest Guy", "cursive";
 }
 
-.prompt {
-    width: fit-content;
+.gameDashboard,
+.newGame {
+    white-space: nowrap;
     align-self: center;
     text-align: center;
     padding: 2vh;
     border-radius: .5vh;
     background-color: #F2A007;
-    font-family: "Silkscreen", "cursive";
-    font-size: 2vh;
+    font-family: "Luckiest Guy", "cursive";
+    font-size: 28px;
+}
+
+.newGame,
+button {
+    cursor: pointer;
 }
 
 .playerOptions {
@@ -53,27 +59,39 @@ body {
 
 .playerSymbol,
 .computerSymbol,
-.rock,
-.paper,
-.scissors {
+button {
     padding: 2vh 10vw;
     font-size: 5vh;
     border-radius: 2vw;
     background-color: grey;
 }
 
-.rock,
-.paper,
-.scissors {
-    margin: 0vw 2vw;
-    border: 2px solid #F2A007;
-}
-
 .playerSymbol,
 .computerSymbol {
-    width: fit-content;
     margin: auto;
     border: 2px solid black;
+}
+
+button {
+    margin: 0vw 2vw;
+    border: 3px solid #F2A007;
+    box-shadow: 0 4px #a8a8a8;
+}
+
+@media (hover:hover) and (pointer:fine) {
+    button:hover {
+        background-color: rgb(87, 87, 87);
+    }
+    .newGame:hover {
+        background-color: #c48106;
+    }
+}
+
+button:active {
+    transform: translateY(4px);
+    border-bottom: 2px solid gold;
+    border-right: 2px solid gold;
+    box-shadow: 0 2px #686868;
 }
 
 .footer {
@@ -81,4 +99,5 @@ body {
     border-radius: 1vw;
     background-color: #169EF2;
     text-align: center;
+    font-size: 1vh;
 }
