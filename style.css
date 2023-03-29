@@ -1,0 +1,84 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #05DBF2;
+    font-family: "Arial", "sans-serif";
+}
+
+.header {
+    padding: 2vh;
+    text-align: center;
+    border-radius: 1vw;
+    background-color: #169EF2;
+    font-family: "Bungee Shade", "cursive";
+    font-size: 56px;
+}
+
+.playRound {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.playerChoice,
+.computerChoice {
+    margin: 0vh 3vw;
+}
+
+.playerScore,
+.computerScore {
+    margin-top: 2vh;
+    font-size: 2vh;
+    font-family: "Silkscreen", "cursive";
+}
+
+.prompt {
+    width: fit-content;
+    align-self: center;
+    text-align: center;
+    padding: 2vh;
+    border-radius: .5vh;
+    background-color: #F2A007;
+    font-family: "Silkscreen", "cursive";
+    font-size: 2vh;
+}
+
+.playerOptions {
+    display: flex;
+    justify-content: center;
+}
+
+.playerSymbol,
+.computerSymbol,
+.rock,
+.paper,
+.scissors {
+    padding: 2vh 10vw;
+    font-size: 5vh;
+    border-radius: 2vw;
+    background-color: grey;
+}
+
+.rock,
+.paper,
+.scissors {
+    margin: 0vw 2vw;
+    border: 2px solid #F2A007;
+}
+
+.playerSymbol,
+.computerSymbol {
+    width: fit-content;
+    margin: auto;
+    border: 2px solid black;
+}
+
+.footer {
+    padding: 2vh;
+    border-radius: 1vw;
+    background-color: #169EF2;
+    text-align: center;
+}
