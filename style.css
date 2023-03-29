@@ -60,7 +60,7 @@ button {
 .playerSymbol,
 .computerSymbol,
 button {
-    padding: 2vh 10vw;
+    padding: 2vh 8vw;
     font-size: 5vh;
     border-radius: 2vw;
     background-color: grey;
