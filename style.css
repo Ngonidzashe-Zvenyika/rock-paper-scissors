@@ -9,12 +9,13 @@ body {
 }
 
 .header {
+    white-space: nowrap;
     padding: 2vh;
     text-align: center;
     border-radius: 1vw;
     background-color: #169EF2;
     font-family: "Bungee Shade", "cursive";
-    font-size: 56px;
+    font-size: 48px;
 }
 
 .playRound {
@@ -45,7 +46,7 @@ body {
     border-radius: .5vh;
     background-color: #F2A007;
     font-family: "Luckiest Guy", "cursive";
-    font-size: 1.5vh;
+    font-size: 2vh;
 }
 
 .newGame,
