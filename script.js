@@ -87,7 +87,7 @@ function Reset() {
     playerSymbol.innerText = "❓";
     computerSymbol.innerText = "❓";
     playerScore.innerText = "Player Score: 0";
-    computerScore.innerText = "Player Score: 0";
+    computerScore.innerText = "Computer Score: 0";
     dashboard.innerText = "FIRST TO 3 - CHOOSE YOUR WEAPON";
     const newGame =  document.querySelector(".newGame")
     newGame.remove();
