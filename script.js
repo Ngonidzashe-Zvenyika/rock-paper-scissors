@@ -68,7 +68,7 @@ function gameEnd() {
         dashboard.innerText = `${willStoreLastResult} \n Player Score: ${playerPoints} \n Computer score: ${computerPoints} \n Sorry, you lost the game.`;
         let newGame = document.createElement("div");
         newGame.classList.add("newGame");
-        newGame.innerText = "Maybe you'll win next time. Click here to play again.";
+        newGame.innerText = "Maybe you'll win next time, click here to try again.";
         loseSound.play();
         body.insertBefore(newGame, body.children[4]);
         gameOver = true;

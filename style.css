@@ -39,7 +39,6 @@ body {
 
 .gameDashboard,
 .newGame {
-    white-space: nowrap;
     align-self: center;
     text-align: center;
     padding: 2vh;
